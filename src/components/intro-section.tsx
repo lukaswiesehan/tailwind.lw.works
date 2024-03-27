@@ -13,13 +13,13 @@ const text = `a self-tought Design Engineer from Germany. I have been self-emplo
 export const IntroSection = () => {
   return (
     <section className="relative">
-      <TextReveal body={text} className="sticky top-0 h-[36rem]">
+      <TextReveal body={text} className="h-[36rem]">
         {(tokens: any) => (
-          <div className="sticky top-96">
+          <div className="sticky top-[28rem]">
             <div className="flex justify-between items-center mb-16">
               <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {duration: 1.5, ease: 'easeInOut'}}}>
                 <Subtitle>Design Engineer</Subtitle>
-                <div className="font-display text-5xl">Lukas Wiesehan</div>
+                <div className="font-display text-5xl text-black">Lukas Wiesehan</div>
               </motion.div>
               <motion.div
                 initial={{opacity: 0}}
@@ -31,15 +31,15 @@ export const IntroSection = () => {
                 </div>
               </motion.div>
             </div>
-            <div className="text-slate-500 text-3xl leading-snug">
+            <div className="leading-normal">
               <motion.div
                 initial={{opacity: 0, y: 20}}
                 animate={{opacity: 1, y: 0, transition: {duration: 1.5, ease: 'easeOut', delay: 1}}}
-                className="mb-8"
+                className="mb-4"
               >
                 <span>Hey Adam & Steve!</span>
-                <span className="inline-block animate-wave origin-bottom ml-3 -mb-px">
-                  <HandRaisedIcon className="h-7 text-indigo-500/25 -scale-x-100" />
+                <span className="inline-block animate-wave origin-bottom ml-3 -mb-1">
+                  <HandRaisedIcon className="h-6 text-indigo-500/25 -scale-x-100" />
                 </span>
               </motion.div>
               <motion.div initial={{opacity: 0, y: 20}} animate={{opacity: 1, y: 0, transition: {duration: 1.5, ease: 'easeOut', delay: 1.3}}}>

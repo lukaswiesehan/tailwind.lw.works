@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn('relative font-sans antialiased', lato.variable, sora.variable, mono.variable)}>
+      <body className={cn('relative font-sans antialiased text-slate-500 text-xl', lato.variable, sora.variable, mono.variable)}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

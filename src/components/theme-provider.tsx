@@ -6,7 +6,7 @@ import {AuroraBackground} from './aurora-background'
 
 export const ThemeProvider: FC<{children: ReactNode}> = ({children}) => {
   return (
-    <NextThemes attribute="class" enableSystem={false}>
+    <NextThemes attribute="class" enableSystem={false} defaultTheme="light">
       <div className="relative h-screen">
         <AuroraBackground />
         <div>{children}</div>

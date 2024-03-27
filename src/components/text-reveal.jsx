@@ -41,7 +41,7 @@ function Root({body = '', children, className, as: Component = 'div', ...props})
 function Token({index, children}) {
   const context = useContext(TextRevealContext)
 
-  const isActive = useMemo(() => index / context.tokens.length < context.progress, [index, context.progress])
+  const isActive = useMemo(() => index / context.tokens.length < context.progress * 1.6, [index, context.progress])
 
   return <>{children(isActive)}</>
 }

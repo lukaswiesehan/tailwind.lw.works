@@ -3,23 +3,15 @@
 'use client'
 
 import {cn} from '@/utils/cn'
-import {motion, useScroll, useTransform} from 'framer-motion'
+import {motion} from 'framer-motion'
 
 interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
   showRadialGradient?: boolean
 }
 
 export const AuroraBackground = ({showRadialGradient = true}: AuroraBackgroundProps) => {
-  const {scrollY} = useScroll()
-  const offset = useTransform(scrollY, [0, 100], [0, 50])
-
   return (
-    <motion.div
-      initial={{opacity: 0}}
-      animate={{opacity: [0, 0, 1], transition: {duration: 3}}}
-      style={{y: offset}}
-      className="absolute inset-0 overflow-hidden"
-    >
+    <motion.div initial={{opacity: 0}} animate={{opacity: [0, 0, 1], transition: {duration: 3}}} className="fixed inset-0 overflow-hidden">
       <div
         className={cn(
           `
