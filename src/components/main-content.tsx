@@ -37,7 +37,7 @@ export const MainContent = () => {
       variants={variants}
       initial="hidden"
       animate={show ? 'show' : 'hidden'}
-      className="relative mt-32 prose prose-lg prose-li:my-0 text-slate-500 prose-headings:text-black prose-headings:font-display prose-a:text-black prose-img:rounded-xl prose-img:shadow-lg prose-img:border-4 prose-img:border-white/50 prose-img:-mx-1 prose-strong:text-black"
+      className="relative mt-32 prose sm:prose-lg prose-li:my-0 text-slate-500 prose-headings:text-black prose-headings:font-display prose-a:text-black prose-img:rounded-xl prose-img:shadow-lg prose-img:border-4 prose-img:border-white/50 prose-img:-mx-1 prose-strong:text-black"
     >
       <h2>About me</h2>
       <p>
@@ -96,7 +96,7 @@ export const MainContent = () => {
       </p>
       <h2>My Work</h2>
       <p>As already mentioned, my design and development skills are mostly self-taught. This is my tech stack most of the time.</p>
-      <div className="flex not-prose gap-8 items-center w-full my-8">
+      <div className="flex flex-wrap not-prose gap-8 items-center w-full my-8">
         <Image src={Next} alt="Next.js" className="h-4 w-auto" />
         <Image src={Tailwind} alt="TailwindCSS" className="h-4 w-auto" />
         <Image src={Motion} alt="Framer Motion" className="h-5.5 w-auto" />

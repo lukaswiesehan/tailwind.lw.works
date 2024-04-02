@@ -11,22 +11,22 @@ const text = `a self-taught Design Engineer from Germany. I have been self-emplo
 
 export const Intro = () => {
   return (
-    <section className="relative text-xl">
+    <section className="relative text-lg sm:text-xl">
       <TextReveal body={text} className="h-[36rem]">
         {(tokens: any) => (
           <div className="sticky top-[28rem]">
             <div className="flex justify-between items-center mb-16">
               <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {duration: 1.5, ease: 'easeInOut'}}}>
-                <div className="mb-1 flex items-center space-x-4 font-mono uppercase text-indigo-500 dark:text-indigo-400 sm:mb-3">
+                <div className="mb-1 flex items-center space-x-4 font-mono text-sm sm:text-lg uppercase text-indigo-500 dark:text-indigo-400 sm:mb-3">
                   <span>Design Engineer</span>
                   <span className="text-black/20 dark:text-white/20">{'///'}</span>
                 </div>
-                <div className="font-display text-5xl text-black">Lukas Wiesehan</div>
+                <div className="font-display text-2xl sm:text-5xl text-black">Lukas Wiesehan</div>
               </motion.div>
               <motion.div
                 initial={{opacity: 0}}
                 animate={{opacity: 1, transition: {duration: 1.5, ease: 'easeInOut', delay: 0.3}}}
-                className="rounded-full aspect-square h-32 bg-white/50 backdrop-blur shadow-xl shadow-slate-500/10 p-2"
+                className="rounded-full aspect-square h-20 sm:h-32 bg-white/50 backdrop-blur shadow-xl shadow-slate-500/10 p-1 sm:p-2"
               >
                 <div className="relative h-full aspect-square rounded-full overflow-hidden border border-indigo-400">
                   <Image src={Lukas} alt="Lukas Wiesehan" fill className="object-cover object-center" />
