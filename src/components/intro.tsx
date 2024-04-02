@@ -1,6 +1,5 @@
 'use client'
 
-import {Subtitle} from '@/components/subtitle'
 import {TextReveal} from '@/components/text-reveal'
 import {cn} from '@/utils/cn'
 import Image from 'next/image'
@@ -8,17 +7,20 @@ import Lukas from '../../public/images/lukas.jpg'
 import {HandRaisedIcon} from '@heroicons/react/24/solid'
 import {motion} from 'framer-motion'
 
-const text = `a self-tought Design Engineer from Germany. I have been self-employed for over 3 years now, building websites for software startups most of the time.`
+const text = `a self-taught Design Engineer from Germany. I have been self-employed for over 3 years now, building websites for software startups most of the time.`
 
-export const IntroSection = () => {
+export const Intro = () => {
   return (
-    <section className="relative">
+    <section className="relative text-xl">
       <TextReveal body={text} className="h-[36rem]">
         {(tokens: any) => (
           <div className="sticky top-[28rem]">
             <div className="flex justify-between items-center mb-16">
               <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {duration: 1.5, ease: 'easeInOut'}}}>
-                <Subtitle>Design Engineer</Subtitle>
+                <div className="mb-1 flex items-center space-x-4 font-mono uppercase text-indigo-500 dark:text-indigo-400 sm:mb-3">
+                  <span>Design Engineer</span>
+                  <span className="text-black/20 dark:text-white/20">{'///'}</span>
+                </div>
                 <div className="font-display text-5xl text-black">Lukas Wiesehan</div>
               </motion.div>
               <motion.div

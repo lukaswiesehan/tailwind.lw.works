@@ -2,14 +2,14 @@ import type {Metadata} from 'next'
 import {Lato, Sora, JetBrains_Mono} from 'next/font/google'
 import './globals.css'
 import {cn} from '@/utils/cn'
-import {ThemeProvider} from '@/components/theme-provider'
+import {AuroraBackground} from '@/components/aurora-background'
 
 const lato = Lato({weight: ['400', '700'], subsets: ['latin'], display: 'swap', variable: '--font-lato'})
 const sora = Sora({weight: '800', subsets: ['latin'], display: 'swap', variable: '--font-sora'})
 const mono = JetBrains_Mono({weight: '300', subsets: ['latin'], display: 'swap', variable: '--font-mono'})
 
 export const metadata: Metadata = {
-  title: 'Lukas Wiesehan – Tailwind Labs Design Engineer',
+  title: 'Lukas Wiesehan – Design Engineer',
   description: `I'm Lukas, a self-tought Design Engineer from Germany. This is my interactive application for the Design Engineer role at Tailwind Labs.`,
   icons: {
     icon: [
@@ -32,8 +32,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn('relative font-sans antialiased text-slate-500 text-xl', lato.variable, sora.variable, mono.variable)}>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className={cn('relative font-sans antialiased text-slate-500', lato.variable, sora.variable, mono.variable)}>
+        <div className="relative h-screen">
+          <AuroraBackground />
+          {children}
+        </div>
       </body>
     </html>
   )
